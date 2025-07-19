@@ -231,16 +231,15 @@ header {
     margin-top: 1px;
   }
   .hero {
-    height: 28vh;
+    height: 32vh;
     min-height: 80px;
     padding: 0 2px;
   }
-  .overlay-text {
-    font-size: 0.7rem;
-    padding: 5px;
-    max-width: 100%;
-  }
   .about {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 10px 2px;
   }
   .about p {
@@ -251,25 +250,20 @@ header {
     padding: 6px 8px;
     font-size: 0.8rem;
   }
+  .overlay-text {
+    font-size: 0.7rem;
+    padding: 5px;
+    max-width: 100%;
+  }
 }
 
-@media (max-width: 400px) {
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-  .site-title {
-    font-size: 1rem;
-  }
-  .site-subtitle {
-    font-size: 0.8rem;
-  }
-  .overlay-text {
-    font-size: 0.8rem;
-    padding: 4px;
-  }
-  .cta-button {
-    font-size: 0.85rem;
-    padding: 6px 6px;
-  }
+/* Ensure the main content fills the viewport height */
+body {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.hero, .about {
+  flex-shrink: 0;
 }
