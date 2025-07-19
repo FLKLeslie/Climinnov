@@ -234,13 +234,14 @@ header {
     height: 32vh;
     min-height: 80px;
     padding: 0 2px;
+    margin-bottom: 0; /* Remove any gap below hero */
   }
   .about {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px 2px;
+    flex: unset;
+    display: block;
+    justify-content: unset;
+    padding: 12px 4px 10px 4px;
+    margin-top: 0; /* Remove any gap above about */
   }
   .about p {
     font-size: 0.75rem;
